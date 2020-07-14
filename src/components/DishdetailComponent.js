@@ -51,13 +51,15 @@ class DishDetail extends Component {
     render() {
         if (this.props.dish) {
             return (
-                <div className="row">
-                    <div className="col-12 col-md-5 m-1">
-                        {this.renderDish(this.props.dish)}
-                    </div>
-                    <div className="col-12 col-md-5 m-1">
-                        <h4>Comments</h4>
-                        {this.renderComments(this.props.dish.comments)}
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-5 m-1">
+                            {this.renderDish(this.props.dish)}
+                        </div>
+                        <div className="col-12 col-md-5 m-1">
+                            <h4>Comments</h4>
+                            {this.renderComments(this.props.dish.comments)}
+                        </div>
                     </div>
                 </div>
             );
