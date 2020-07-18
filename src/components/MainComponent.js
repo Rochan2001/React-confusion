@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './MenuComponent';
 import DishDetail from './DishdetailComponent';
-import { DISHES } from '../shared/dishes';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
@@ -50,10 +49,10 @@ class Main extends Component {
         <div>
           <Switch>
               <Route path='/home' component={HomePage} />
-              <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />} />
+              <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />
               <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
-              <Route exact path='/contactus' component={Contact} />} />
+              <Route exact path='/contactus' component={Contact} />
               <Redirect to="/home" />
           </Switch>
         </div>
